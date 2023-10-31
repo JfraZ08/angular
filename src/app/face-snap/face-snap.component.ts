@@ -7,7 +7,7 @@ import { FaceSnap } from '../models/face-snap.model';
 })
 
 
-//ajour donnée en brut
+//ajout donnée en brut
 export class FaceSnapComponent implements OnInit {
   @Input() faceSnap!: FaceSnap;
   buttonText!: string;
@@ -16,14 +16,14 @@ export class FaceSnapComponent implements OnInit {
     this.buttonText = 'Oh Snap';
   }
 
-  onSnap() {
-    if(this.buttonText === 'Oh Snap!') {
+  onaddSnap() {
+    /*if(this.buttonText === 'Oh Snap!') {
       this.faceSnap.snaps++; // boutton ajout
       this.buttonText = 'Oops, unSnap!' 
      }else {
     this.faceSnap.snaps--;
     this.buttonText = 'Oh snap';
-  }
-
+  }*/
+  this.faceSnap.snaps++;
   }
 }
